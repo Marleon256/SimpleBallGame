@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Scenes/MainCharacter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/MainCharacter.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 20, 2, 20 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.788235, 0.701961, 0.701961, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 10, 1, 10 )
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Level" type="Spatial"]
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 4 )
+
+[node name="Box" type="RigidBody" parent="."]
+transform = Transform( 0.80695, 0.413095, -0.422119, -0.59062, 0.564402, -0.576731, 0, 0.714705, 0.699426, -6, 4.27792, 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.999999, 0.000762019, -0.000814839, -0.000454934, 0.945428, 0.325832, 0.00101866, -0.325831, 0.945428, 0.4965, 7.24931, 14 )
+
+[node name="MainCharacter" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+script = ExtResource( 2 )
