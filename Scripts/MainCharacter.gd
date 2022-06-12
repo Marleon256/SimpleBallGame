@@ -7,7 +7,7 @@ const STOP_RATE := 0.1
 const ROTATION_SPEED := deg2rad(5)
 
 func _ready():
-	print("Hello world!!!")
+	pass
 
 func _physics_process(delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_D) and Input.is_physical_key_pressed(KEY_A):
