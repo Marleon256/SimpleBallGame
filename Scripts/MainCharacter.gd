@@ -3,7 +3,7 @@ extends KinematicBody
 var _score := 0
 var _velocity := Vector3(0, 0, 0)
 const SPEED := 5
-const STOP_RATE := 0.1
+const STOP_RATE := 0.15
 const ROTATION_SPEED := deg2rad(5)
 
 func _ready():
