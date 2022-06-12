@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var _score := 1
+var _score := 0
 var _velocity := Vector3(0, 0, 0)
 const SPEED := 6
 const STOP_RATE := 0.1
