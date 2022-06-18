@@ -9,5 +9,8 @@ export_presets.cfg
 data_*/
 
 Assets/Meshes/*
+Assets/Textures/*
+Assets/Resources/*
+Assets/Scenes/SecondaryScenes/*
 Export/*
 
