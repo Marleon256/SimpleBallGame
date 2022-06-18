@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="SimpleBallGame"
-run/main_scene="res://Assets/Scenes/Level.tscn"
+run/main_scene="res://Assets/Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [display]
